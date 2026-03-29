@@ -31,25 +31,6 @@ import os
 rootdir = "gutenberg-dammit-files-v002/gutenberg-dammit-files/"
 print(os.listdir("gutenberg-dammit-files-v002/gutenberg-dammit-files"))
 
-#filebuffer = ""	# this variable will be several gigabytes, i need to break it into batches
-
-#for dir in os.listdir("gutenberg-dammit-files-v002/gutenberg-dammit-files"):
-    #for file in os.listdir(rootdir+dir):
-        #filebuffer += open(rootdir+dir+"/"+file).read()
-
-#file = open("recording.txt","r")
-#filebuffer = file.read()
-
-#counter = Counter()
-
-#for word in filebuffer.split():
-	#cleanword = word.strip("!?.()&@#-;:/").lower()
-	#counter[cleanword] += 1
-	
-#print(counter.most_common()[0:10])
-print()
-#print(counter["jesus"])
-
 
 # generate bi-grams
 bi_counter = Counter()
@@ -59,7 +40,7 @@ window = []
 
 try:
 	for dir in sorted(os.listdir("gutenberg-dammit-files-v002/gutenberg-dammit-files")):
-		if "004" in dir:
+		if "006" in dir:
 			print('breaking...')
 			
 			save(successor_map)
